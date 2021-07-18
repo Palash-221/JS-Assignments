@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <input id="name" type="text" placeholder="Name" ><br>
+        <input id="pass" type="text" placeholder="password"><br>
+        <button onclick="newacc()">Log In</button>
+        
+            <div>
+            <h1 style="font-style: italic;">WELCOME <h1 id="fname"></h1></h1>
+        </div>
+        
+        
+        
+    </div>
+
+
+    <script>
+       
+       
+        
+       var users =[{fname:"Palash",lname:"Mone",pass:123},
+        {fname:"Karan",lname:"Verma",pass:456},
+        {fname:"Divyansh",lname:"Sharma",pass:432},
+        {fname:"Nivedita",lname:"Chouhan",pass:229}];
+       
+       
+        function login(users){
+           
+            if(users.fname =="Palash" && users.pass == 123)
+            {
+                    return users.fname;
+            }
+        };
+           
+
+        function newacc() {
+            
+            document.getElementById("fname").innerHTML = users.map(login);
+        
+        };
+ 
+        
+    
+
+  
+    </script>
+    
+
+   
+</body>
+</html>

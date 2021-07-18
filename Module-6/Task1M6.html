@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .table-danger { 
+           
+            border: 2px solid red;
+        }
+        tr{
+            padding: 10px;
+            border: 5px;
+        }
+        td{
+            padding: 10px;
+            border: 2px solid red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    
+    <body>
+    
+        <table id="table" class="table-light">
+            <thead>
+                <tr class="table-danger">
+                    <th scope="col">First Column</th>
+                    <th scope="col">Second Column</th>
+                    <th scope="col">Third Column</th>
+                    <th scope="col">Fourth Column</th>
+                </tr>
+            </thead>
+         <tbody>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2">2</td>
+                <td class="col3">3</td>
+                <td class="col4">4</td>
+            </tr>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2" >2</td>
+                <td class="col3">3</td>
+                <td class="col4">4</td>
+            </tr>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2" >2</td>
+                <td class="col3">3</td>
+                <td class="col4">4</td>
+            </tr>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2">2</td>
+                <td class="col3">3</td>
+                <td class="col4">4</td>
+            </tr>
+            <tr>
+                <td class="col1">1</td>
+                <td class="col2">2</td>
+                <td class="col3">3</td>
+                <td class="col4">4</td>
+            </tr>
+            </tbody>
+        </table>
+    
+<script>
+    
+    var x = document.querySelector("tbody");
+    var column = document.querySelectorAll(".col2");
+    x.addEventListener("click",function (event){
+    column.forEach(e => {
+        e.style.backgroundColor = "lightblue" ;
+    
+    });
+})
+
+
+</script>
+        
+
+</body>
+</html>
+   

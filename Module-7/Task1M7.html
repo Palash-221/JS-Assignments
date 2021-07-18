@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- To create a textarea and if a user makes changes to it without saving then show an alert that data is not saved. -->
+   <h1>TEXT</h1>
+    <textarea  type="text" id="name" onchange="update()"></textarea>
+    <button id="save" onclick="saved()">Save Data</button>
+</body>
+<script>
+     let value = '';
+    var unsaved = false;
+    function update(){
+        unsaved = true;
+      value = document.getElementById("name").value;
+    }
+
+    
+    function saved(){
+        
+            unsaved = false;
+            alert("DATA SAVED!!");
+    }
+    /*
+    function toAlert(){
+        if(unsaved){
+            alert("LEAVE SITE?")
+            
+        }
+    }
+    */
+    window.addEventListener('beforeunload', 
+                                function (e) {
+                                    if(unsaved){
+                                        e.preventDefault();
+                                        e.returnValue = '';
+                                        
+                                    }
+                                })
+
+</script>
+</html>

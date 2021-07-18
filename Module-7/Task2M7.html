@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .td{
+            border: 5px solid red;
+            padding: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- To update the task of the column so that when a user clicks on a cell, then the background color of the cell changes on each click and to optimize the code -->
+    <table id="table">
+        <tr class="tr">
+            <td class="td">col1</td>
+            <td class="td">col2</td>
+            <td class="td">col4</td>
+            <td class="td">col4</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">col1</td>
+            <td class="td">col2</td>
+            <td class="td">col4</td>
+            <td class="td">col4</td>
+        </tr>
+        <tr class="tr">
+            <td class="td">col1</td>
+            <td class="td">col2</td>
+            <td class="td">col4</td>
+            <td class="td">col4</td>
+        </tr>
+    </table>
+    <script>
+        function color(){
+        var y = document.getElementById("table");
+        var x = document.querySelectorAll(".td");
+        y.addEventListener("click",function(x) {
+           x.target.style.backgroundColor="#"+colorChange();
+
+            
+        })
+        
+    }
+    function colorChange(){
+        return  Math.floor(1000000*Math.random());
+    }
+    color();
+    console.log(colorChange());
+
+    </script>
+</body>
+</html>

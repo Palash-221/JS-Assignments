@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="login">
+        <input id="name" type="text" placeholder="Name" ><br>
+        <input id="pass" type="text" placeholder="password"><br>
+        <button onclick="login()">Log In</button>
+        
+            <div>
+            <h1 style="font-style: italic;">WELCOME <h1 id="wlc"></h1></h1>
+        </div>
+        <h3>Name</h3> 
+        <h5 id="fname"></h5>
+        <h3>Last Name</h3>
+        <h5 id="lname" ></h5>
+        
+    </div>
+
+
+    <script>
+       
+   
+        let users =[{fname:"Palash",lname:"Mone",pass:123},
+        {fname:"Karan",lname:"Verma",pass:456},
+        {fname:"Divyansh",lname:"Sharma",pass:432},
+        {fname:"Nivedita",lname:"Chouhan",pass:229}];
+       
+       
+        function login(){
+            let uname = document.getElementById("name").value;
+            let upass = document.getElementById("pass").value;
+            console.log(`Hello ${uname}`);
+            let log = users.filter(function(ele) {
+
+                return ele.pass == upass && ele.fname == uname;
+                
+            })
+             log.forEach(x => {
+                document.getElementById("wlc").innerHTML= x.fname;
+                document.getElementById("fname").innerHTML= x.fname;    
+                document.getElementById("lname").innerHTML= x.lname;
+                
+
+            });
+ 
+        }
+    
+
+  
+    </script>
+    
+
+   
+</body>
+</html>
